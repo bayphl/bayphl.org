@@ -1,7 +1,9 @@
 ---
 import Preview from "../components/1/preview.astro";
-import banner from "../images/bayphl-banner-dark.svg";
-import bannerVertical from "../images/bayphl-logo-vertical-dark.svg";
+import bannerLight from "../images/bayphl-banner-light.svg";
+import bannerDark from "../images/bayphl-banner-dark.svg";
+import bannerVerticalDark from "../images/bayphl-logo-vertical-dark.svg";
+import bannerVerticalLight from "../images/bayphl-logo-vertical-light.svg";
 ---
 
 <html lang="en">
@@ -26,9 +28,20 @@ import bannerVertical from "../images/bayphl-logo-vertical-dark.svg";
     <div id="root">
       <header>
         <picture id="logo">
-          <source media={`(max-width: 768px)`} srcset={bannerVertical.src} />
-          <source srcset={banner.src} />
-          <img src={banner.src} alt="BAyPHL" />
+          <source
+            media={`(max-width: 768px) and (prefers-color-scheme: light)`}
+            srcset={bannerVerticalDark.src}
+          />
+          <source
+            media={`(max-width: 768px) and (prefers-color-scheme: dark)`}
+            srcset={bannerVerticalLight.src}
+          />
+          <source
+            media={`(prefers-color-scheme: dark)`}
+            srcset={bannerLight.src}
+          />
+          <source srcset={bannerDark.src} />
+          <img src={bannerDark.src} alt="BAyPHL" />
         </picture>
         <h1>Bay Area Puzzle Hunt League</h1>
       </header>
@@ -127,14 +140,56 @@ import bannerVertical from "../images/bayphl-logo-vertical-dark.svg";
       :root {
         --color-teal: #2c5f5a;
         --color-coral: #e07a5f;
+        --color-dark-coral: #d4603f;
         --color-sage: #81b29a;
         --color-navy: #1a2332;
+        --color-deep-navy: #1f2937;
         --color-cream: #f2e9e4;
-        --color-gray-200: #e9ecef;
+        --color-light-gray: #e9ecef;
+        --color-smoke: #1a1611;
+        --color-earth: #2a241c;
+        --color-bistre: #2f2821;
+        --color-taupe: #3d3529;
+        --color-salmon: #ae8877;
+        --color-melon: #ffb3a3;
 
         --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif,
           "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
           "Noto Color Emoji";
+      }
+
+      :root {
+        --color-background: var(--color-cream);
+        --color-surface: white;
+        --color-text: var(--color-navy);
+        --color-header-text: var(--color-cream);
+        --color-heading-text: var(--color-teal);
+        --color-card-border: var(--color-light-gray);
+        --color-card-background: white;
+        --color-link: var(--color-coral);
+        --color-link-hover: var(--color-dark-coral);
+        --color-focus: var(--color-teal);
+        --color-surface-shadow: rgba(44, 95, 90, 0.08);
+        --color-card-shadow: rgba(0, 0, 0, 0.08);
+        --color-card-shadow-hover: rgba(0, 0, 0, 0.12);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --color-background: var(--color-smoke);
+          --color-surface: var(--color-earth);
+          --color-text: var(--color-cream);
+          --color-header-text: var(--color-navy);
+          --color-heading-text: var(--color-sage);
+          --color-card-border: var(--color-taupe);
+          --color-card-background: var(--color-bistre);
+          --color-link: var(--color-salmon);
+          --color-link-hover: var(--color-melon);
+          --color-focus: var(--color-sage);
+          --color-surface-shadow: rgba(0, 0, 0, 0.25);
+          --color-card-shadow: rgba(0, 0, 0, 0.3);
+          --color-card-shadow-hover: rgba(0, 0, 0, 0.4);
+        }
       }
 
       html,
@@ -145,7 +200,8 @@ import bannerVertical from "../images/bayphl-logo-vertical-dark.svg";
       }
 
       body {
-        background: var(--color-cream);
+        background: var(--color-background);
+        color: var(--color-text);
         min-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -157,8 +213,8 @@ import bannerVertical from "../images/bayphl-logo-vertical-dark.svg";
         max-width: 1024px;
         min-height: 100vh;
         margin-inline: auto;
-        background: white;
-        box-shadow: 0 4px 32px rgba(44, 95, 90, 0.08);
+        background: var(--color-surface);
+        box-shadow: 0 4px 32px var(--color-surface-shadow);
         display: flex;
         flex-direction: column;
       }
@@ -172,7 +228,7 @@ import bannerVertical from "../images/bayphl-logo-vertical-dark.svg";
           var(--color-teal) 0%,
           var(--color-sage) 100%
         );
-        color: var(--color-cream);
+        color: var(--color-header-text);
         padding-block: 1rem;
         margin-bottom: 1rem;
       }
@@ -191,11 +247,23 @@ import bannerVertical from "../images/bayphl-logo-vertical-dark.svg";
         font-weight: 700;
         letter-spacing: 0.03em;
       }
+      a {
+        color: var(--color-link);
+      }
+      a:hover {
+        color: var(--color-link-hover);
+        text-decoration: underline;
+      }
+      a:focus {
+        outline: 2px solid var(--color-focus);
+        outline-offset: 2px;
+        border-radius: 2px;
+      }
       #main {
         padding: 1rem 2rem;
       }
       #main h2 {
-        color: var(--color-teal);
+        color: var(--color-heading-text);
         font-size: 2.5rem;
         margin-top: 2rem;
         margin-bottom: 1rem;
@@ -208,7 +276,7 @@ import bannerVertical from "../images/bayphl-logo-vertical-dark.svg";
         font-size: 1.15rem;
       }
       #main p {
-        color: var(--color-navy);
+        color: var(--color-text);
         line-height: 1.7;
         margin-bottom: 1rem;
       }
@@ -218,15 +286,21 @@ import bannerVertical from "../images/bayphl-logo-vertical-dark.svg";
         gap: 1rem;
 
         & .card {
-          border: 1px solid var(--color-gray-200);
+          border: 1px solid var(--color-card-border);
+          background: var(--color-card-background);
           border-radius: 0.5rem;
           padding: 1rem;
           margin-bottom: 1rem;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 20px var(--color-card-shadow);
           transition: box-shadow 0.1s ease-in-out;
 
           &:hover {
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 8px 30px var(--color-card-shadow-hover);
+          }
+
+          &:focus-within {
+            outline: 2px solid var(--color-focus);
+            outline-offset: 2px;
           }
         }
 
@@ -234,7 +308,7 @@ import bannerVertical from "../images/bayphl-logo-vertical-dark.svg";
           font-weight: 700;
           font-size: 1.5rem;
           margin-bottom: 1rem;
-          color: var(--color-teal);
+          color: var(--color-heading-text);
         }
       }
 

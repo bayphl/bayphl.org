@@ -54,6 +54,32 @@ import bayphl1 from "../../images/1/banner.svg";
   a:hover {
     color: var(--color-slate-300);
   }
+
+  @media (prefers-color-scheme: dark) {
+    #preview {
+      background-color: var(--color-espresso);
+      color: var(--color-sand);
+      border-color: #8b6f42; /* Warmer brown border instead of slate */
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .tabs a {
+      color: var(--color-sand);
+    }
+
+    a {
+      color: #f4a582; /* Warm coral instead of blue */
+    }
+
+    a:hover {
+      color: #ffb3a3; /* Lighter warm coral instead of blue */
+    }
+  }
 </style>
 <div id="preview">
   <p>
