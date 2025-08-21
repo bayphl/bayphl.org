@@ -1,0 +1,78 @@
+---
+import bayphl1 from "../../images/1/banner.svg";
+---
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap");
+
+  #preview {
+    --color-rust: #a0522d;
+    --color-cream: #f5f5dc;
+    --color-sand: #f4e4c1;
+    --color-espresso: #3c2414;
+    --color-slate-300: #2b3d4f;
+    --color-slate-500: #486684;
+
+    font-family: "Inter", sans-serif;
+
+    margin-bottom: 8px;
+    margin-top: 0px;
+    border: 2px solid var(--color-rust);
+    padding: 15px;
+    background-color: var(--color-cream);
+    color: var(--color-espresso);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .tabs a {
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+    color: var(--espresso);
+  }
+
+  h1 {
+    font-weight: 900;
+  }
+
+  p {
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: var(--color-slate-500);
+  }
+
+  a:hover {
+    color: var(--color-slate-300);
+  }
+</style>
+<div id="preview">
+  <p>
+    Stay tuned for news of BAyPHL 1, which takes the recent <a
+      href="https://24.baphl.org"
+      target="_blank"
+      rel="noopener noreferrer">BAPHL 24</a
+    > and adapts and re-imagines it for the Bay Area:
+  </p>
+
+  <p>
+    <img id="banner" src={bayphl1.src} alt="BAyPHL 1" />
+  </p>
+
+  <p>
+    Sign up for <a
+      href="https://groups.google.com/g/bayphl-announce"
+      target="_blank"
+      rel="noopener noreferrer">our mailing list</a
+    > to make sure you don’t miss anything!
+  </p>
+</div>
