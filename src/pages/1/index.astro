@@ -106,16 +106,9 @@ import bayphl1 from "../../images/1/banner.svg";
 
           <dt>How do I register?</dt>
           <dd>
-            Registration will open on
-            <span data-tippy-timestamp="1757980800"
-              >Monday, September 15th at 5PM Pacific</span
-            >. There will be options to register a team, or you can sign up as
-            an unattached hunter, and we will do our best to match you with
-            other solvers. Ahead of that, we highly recommend checking in with
-            your friends and figuring out who your team will be and your
-            preference of day for solving — we will ask you for your date
-            preferences during registration, and have a maximum number of teams
-            we can support each day, on a first-come-first-serve basis.
+            Registration is <a href="#register">open now</a>! The number of
+            teams is limited, and we will be assigning slots on each day on a
+            first-come-first-serve basis, so make sure that you register ASAP!
           </dd>
 
           <dt>How much will it cost?</dt>
@@ -235,18 +228,30 @@ import bayphl1 from "../../images/1/banner.svg";
       <div class="block" id="register">
         <h2>BayPHL 1 Registration</h2>
 
+        <p><strong>Registration is open now!</strong></p>
+
         <p>
-          Registration will open on
-          <span data-tippy-timestamp="1757980800"
-            >Monday, September 15th at 5PM Pacific</span
-          >
-          (check back here at that time). There will be options to register a team,
-          or to sign up as an unattached hunter and we will do our best to match
-          you with other solvers. Ahead of that, we highly recommend checking in
-          with your friends and figuring out who your team will be and your preference
-          of day for solving — we will ask you for your date preferences during registration,
-          and have a maximum number of teams we can support each day, on a first-come-first-serve
-          basis.
+          If you would like to register a team of 4–6 people, you may register
+          via
+          <a href="https://forms.gle/1hd6gFpAQP3ewcRcA">this Google form</a>.
+          Once you have filled out the form, we will contact you via email to
+          collect payment in order to confirm your registration. BAPHL 24 will
+          cost $40 per team.
+        </p>
+
+        <p>
+          If you don’t have a team, you may sign up as a group of 1 or 2
+          unattached solvers using
+          <a href="https://forms.gle/88Szmtbd3hkbKHrr5">this Google form</a>,
+          and we will attempt to match you with an existing team that is willing
+          to accept unattached solvers.
+        </p>
+
+        <p>
+          (Note that for simplicity and our own sanity, we are unfortunately
+          unable to accept groups of 3 as either a team or a group of unattached
+          solvers. We would recommend finding a fourth person to join your group
+          if you can!)
         </p>
       </div>
 
@@ -413,33 +418,6 @@ import bayphl1 from "../../images/1/banner.svg";
           background-color: var(--color-tab-hover);
         }
       }
-
-      [data-tippy-timestamp] {
-        text-decoration: underline dotted;
-        cursor: help;
-      }
     </style>
-    <script>
-      import tippy from "tippy.js";
-      import "tippy.js/dist/tippy.css";
-      tippy("[data-tippy-timestamp]", {
-        placement: "top",
-        theme: "light",
-        content: function (el) {
-          const timestamp = parseInt(
-            el.getAttribute("data-tippy-timestamp") ?? "0"
-          );
-          const date = new Date(timestamp * 1000);
-          return date.toLocaleString("en-US", {
-            month: "long",
-            day: "numeric",
-            year: "numeric",
-            hour: "numeric",
-            minute: "2-digit",
-            timeZoneName: "short",
-          });
-        },
-      });
-    </script>
   </body>
 </html>
