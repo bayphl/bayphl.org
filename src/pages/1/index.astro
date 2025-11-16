@@ -1,5 +1,13 @@
 ---
-import bayphl1 from "../../images/1/banner.svg";
+import bayphl1 from "../../assets/1/banner.svg";
+import packet1 from "../../assets/1/packet-1-start.pdf";
+import packet2 from "../../assets/1/packet-2-beta.pdf";
+import packet3 from "../../assets/1/packet-3-gamma.pdf";
+import packet4 from "../../assets/1/packet-4-beta-revisited.pdf";
+import packet5 from "../../assets/1/packet-5-alpha-revisited.pdf";
+import packet6 from "../../assets/1/packet-6-end.pdf";
+import puzzleTheLostBooks from "../../assets/1/puzzles/the-lost-books/puzzle.pdf";
+import puzzleSupplyChains from "../../assets/1/puzzles/supply-chains/puzzle.pdf";
 ---
 
 <html lang="en">
@@ -21,10 +29,9 @@ import bayphl1 from "../../images/1/banner.svg";
     <div id="root">
       <div id="header">
         <div class="tabs">
-          <a href="#info">Logistics</a>
-          <a href="#puzzles">Puzzle Info</a>
-          <a href="#register">Registration</a>
-          <a href="#contact">Contact</a>
+          <a href="#info">Summary</a>
+          <a href="#puzzles">Puzzles</a>
+          <a href="#credits">Credits</a>
         </div>
       </div>
 
@@ -35,389 +42,348 @@ import bayphl1 from "../../images/1/banner.svg";
       </div>
 
       <div class="block" id="info">
-        <h1>BayPHL 1: Coming November 8th and 9th, 2025</h1>
-        <h2>Basic Information</h2>
+        <h1>BayPHL 1</h1>
 
-        <dl>
-          <dt>What is this?</dt>
-          <dd>
-            <p>
-              BayPHL is the Bay Area Puzzle Hunt League, a recurring series of
-              <a
-                href="https://en.wikipedia.org/wiki/Puzzle_hunt"
-                target="_blank"
-                rel="noopener noreferrer">puzzle hunts</a
-              >
-              in the Bay Area, inspired by its <a href="https://baphl.org"
-                >Boston-area sibling</a
-              >.
-            </p>
-            <p>
-              Teams of 4–6 are given challenging puzzles that require various
-              logical, lateral-thinking, and creative skills to solve, while
-              getting outside and exploring locations in the San Francisco Bay
-              Area.
-            </p>
-          </dd>
+        <p>
+          BayPHL 1 took place on November 8th and 9th, 2025 in the Marina
+          District of San Francisco. A total of 75 teams participated. Thanks to
+          everyone who joined us, and a special congratulations to the teams
+          that finished:
 
-          <dt>OK, but what is <em>this</em>, specifically?</dt>
-          <dd>
-            <p>
-              BayPHL 1 is an adaptation of the recent <a
-                href="https://24.baphl.org"
-                target="_blank"
-                rel="noopener noreferrer">BAPHL 24</a
-              >, which ran in August in Watertown, MA. We’ve taken the puzzles
-              and route from that event and re-imagined them for the Bay Area.
-              The overall experience will be very similar, although we’ve made
-              some adjustments in cases where puzzles depended on specific
-              physical elements unique to the Watertown route.
-            </p>
+          <details style="margin-bottom: 1em;">
+            <summary>Finishing teams (in alphabetical order)</summary>
 
-            <p>
-              (You will have an advantage though, as it probably won’t be 90°F
-              outside this time!)
-            </p>
-          </dd>
+            <ul>
+              <li>✈✈✈</li>
+              <li>🚀🚀🚀</li>
+              <li>Baffled</li>
+              <li>Big Dipper</li>
+              <li>BMT</li>
+              <li>Capybara Collective</li>
+              <li>Casual Birders</li>
+              <li>Chicken and ROFLs</li>
+              <li>Consumer Recreation Services</li>
+              <li>Cult of Idiotic Avians</li>
+              <li>Duck Gizzards</li>
+              <li>dunno</li>
+              <li>frak overspill not yet a health concern</li>
+              <li>gaylactic trendysetters</li>
+              <li>glwacoy</li>
+              <li>Golden Delicious</li>
+              <li>happy birthday jon!</li>
+              <li>Have you tried moving to the Bay Area?</li>
+              <li>Lake Supreme</li>
+              <li>Leguminati</li>
+              <li>Literally Baffle Waffle</li>
+              <li>LXP</li>
+              <li>Owls in Towels</li>
+              <li>Peanut Butter & Jellyfish</li>
+              <li>Pinniped Party</li>
+              <li>Ship of Fools</li>
+              <li>Something's Fishy</li>
+              <li>Strobe Light Syzygy</li>
+              <li>Team Locurio</li>
+              <li>Team Prospect</li>
+              <li>tfti</li>
+              <li>The Last Minute Tram</li>
+              <li>We are the issue</li>
+            </ul>
+          </details>
+        </p>
 
-          <dt>When is BayPHL 1 happening?</dt>
-          <dd>
-            <p>
-              <strong
-                >BayPHL 1 will have two separate identical instances</strong
-              >
-              — Saturday, November 8, 2025, and Sunday, November 9, 2025, both starting
-              at 9:30 AM and running until <em>at least</em> 5:30 PM (but based on
-              our experiences in Boston, teams should expect to stick around for
-              a bit longer). Teams can participate on either Saturday or Sunday.
-            </p>
-
-            <p>
-              The route will be entirely outdoors, and will start and end near
-              <a
-                href="https://maps.app.goo.gl/KVzf2RPTEaS2AFRA6"
-                target="_blank"
-                rel="noopener noreferrer">Ghiradelli Square in San Francisco</a
-              >. Solvers should expect to walk around 4.5 miles over the course
-              of the route. More specifics will be given to registered teams in
-              the week leading up to the event.
-            </p>
-          </dd>
-
-          <dt>How do I register?</dt>
-          <dd>
-            Registration is <a href="#register">open now</a>! The number of
-            teams is limited, and we will be assigning slots on each day on a
-            first-come-first-serve basis, so make sure that you register ASAP!
-          </dd>
-
-          <dt>How much will it cost?</dt>
-          <dd>
-            BayPHL 1 will cost $40 for a team to participate. BayPHL is a fully
-            volunteer written and run event, so all of your registration costs
-            go toward puzzle production and other overhead.
-          </dd>
-
-          <dt>What is your refund policy?</dt>
-          <dd>
-            <p>
-              If you register and pay for BayPHL 1 and then find that you are
-              unable to make the event, we will do our best to replace your team
-              with another team from the waitlist. If we are able to do so, we
-              would be happy to refund your registration fee. However, if we are
-              unable to do so, we will not be able to issue a refund.
-            </p>
-          </dd>
-
-          <dt>What if it rains?</dt>
-          <dd>
-            <p>
-              We’ll get wet, and we’ll all be a little sad. If it gets really
-              bad, we’ll do our best to adjust, but you should be prepared for
-              whatever nature will bring.
-            </p>
-
-            <p>
-              (Even if it doesn’t rain, it will likely be windy and chilly, so
-              dress in layers!)
-            </p>
-          </dd>
-        </dl>
+        <p>
+          <em
+            >(Did you finish BayPHL 1 but aren’t credited above? Email us and
+            let us know at <a href="mailto:bayphl1@bayphl.org"
+              >bayphl1@bayphl.org</a
+            >. We did our best but the beer may have distracted us a little from
+            marking things off in our tracker.)</em
+          >
+        </p>
       </div>
 
       <div class="block" id="puzzles">
-        <h2>Puzzle Info</h2>
+        <h2>Puzzles and Solutions</h2>
 
-        <dl>
-          <dt>What kinds of puzzles will there be?</dt>
-          <dd>
-            Every hunt is a little bit different. If you want to get a sense of
-            the types of puzzles there could be, you can check out some examples
-            from prior BAPHL events:
-            <a
-              href="https://baphl.org/23/#puzzles"
-              target="_blank"
-              rel="noopener noreferrer">BAPHL 23</a
-            >,
-            <a
-              href="https://22.baphl.org/#puzzles"
-              target="_blank"
-              rel="noopener noreferrer">BAPHL 22</a
-            >, or
-            <a
-              href="https://www.baphl.org/21/#puzzles"
-              target="_blank"
-              rel="noopener noreferrer">BAPHL 21</a
-            >.
-          </dd>
+        <p>
+          BayPHL 1 was an adaptation of <a href="https://24.baphl.org"
+            >BAPHL 24</a
+          > for the San Francisco Bay Area. As with BAPHL, teams of newly minted
+          archaeologists were sent out to investigate well-known wonders of the world
+          and see if they could unearth any secrets (Beginner Archaeologists — Yay!
+          — Pursuing Historical Landmarks). Starting in Fort Mason, teams traversed
+          the Marina District of San Francisco to the Palace of the Fine Arts, where
+          they solved their first metapuzzle and learned their first big secret.
+          That enabled them to return to sites they had already visited, discovering
+          new wonders along the way, before ending at Ghirardelli Square, where they
+          received their final metapuzzle.
+        </p>
 
-          <dt>How hard is the hunt?</dt>
-          <dd>
-            <p>
-              BayPHL 1 will consist of approximately 20 puzzles of potentially
-              wildly varying lengths. Puzzle difficulty is pretty hard to
-              convey, so we’ll lean on comparison. We think this hunt is similar
-              in difficulty to past BAPHLs, if you’re familiar with any of them.
-              It’s probably easier than most MIT Mystery Hunt puzzles, but
-              harder than Puzzled Pint. It’s probably a little harder than DASH
-              (or, if you participated in them, <a
-                href="https://bayareanightgame.org/"
-                rel="noopener noreferrer"
-                target="_blank">BANGs</a
-              >).
-            </p>
+        <p>
+          BayPHL 1 consisted of 21 puzzles, broken into two rounds. The first
+          round included 6 “major wonders” and 6 “minor wonders,” (puzzles which
+          leveraged specific locations, physical components, or temporary
+          installations), capped off by a metapuzzle. The second round featured
+          7 additional puzzles and a capstone metapuzzle.
+        </p>
 
-            <p>
-              More importantly, it’s definitely longer than Puzzled Pint or
-              DASH, if those are your comparison points. As you can see on the <a
-                href="https://24.baphl.org"
+        <p>
+          Here are the puzzles from BayPHL 1, grouped into the stops where teams
+          collected them:
+        </p>
+
+        <ul>
+          <li><a href={packet1}>Packet 1: Start</a></li>
+          <li><a href={packet2}>Packet 2: Beta</a></li>
+          <li><a href={packet3}>Packet 3: Gamma</a></li>
+          <li><a href={packet4}>Packet 4: Beta Revisited</a></li>
+          <li><a href={packet5}>Packet 5: Alpha Revisited</a></li>
+          <li><a href={packet6}>Packet 6: End</a></li>
+        </ul>
+
+        <p>
+          Most of the puzzles were taken directly from BAPHL 24, occasionally
+          with very light modifications (for instance, eliminating a clue about
+          “Camber-ville” which might not land this far away from Cambridge). For
+          BAPHL, we offered teams the option signing up for either “normal” or
+          “hard” difficulty. As a logistical optimization for BayPHL, we only
+          produced a single difficulty which blended the two modes. Rather than
+          reproduce the solutions for those puzzles, <a
+            href="https://24.baphl.org">check out the BAPHL 24 solutions</a
+          >.
+        </p>
+
+        <p>
+          Here are the solutions for the two puzzles that we created for BayPHL
+          1 (replacing “Young Kid Yoga: A Park Day” and ”Field Trip” from
+          BAPHL):
+        </p>
+
+        <table class="puzzles">
+          <tr>
+            <td class="title">The Lost Books</td>
+            <td class="byline">Evan Broder, James Douberley</td>
+            <td class="link">
+              <a href={puzzleTheLostBooks} target="_blank">Puzzle</a>
+            </td>
+            <td class="link">
+              <a href="./puzzles/the-lost-books/solution.html">Solution</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="title">Supply Chains</td>
+            <td class="byline">Jessen Yu</td>
+            <td class="link">
+              <a href={puzzleSupplyChains} target="_blank">Puzzle</a>
+            </td>
+            <td class="link"
+              ><a href="./puzzles/supply-chains/solution.html">Solution</a></td
+            >
+          </tr>
+          <tr>
+            <td class="location-info" colspan="4">
+              Supply Chains was a location puzzle, which required teams to find
+              the <a
+                href="https://www.atlasobscura.com/places/world-sources-of-food-mural"
                 target="_blank"
-                rel="noopener noreferrer">BAPHL 24</a
-              > website, we only had 16 out of 50 teams finish, and even many of
-              those didn’t finish within the first 8 hours. We recommend planning
-              to spend all day on the hunt, through dinner. Our ending location has
-              some great hangout spots, so there will be opportunities to sit and
-              socialize with other participants if you finish early. And if finishing
-              is important to you, we will have volunteers available all day who
-              are eager to provide as much or as little help as required or desired
-              for you to accomplish your goals.
-            </p>
-          </dd>
+                rel="noopener noreferrer">World Sources of Food mosaic</a
+              > on the side of the Safeway on Marina Boulevard.
+            </td>
+          </tr>
+        </table>
 
-          <dt>What kind of supplies will we need?</dt>
-          <dd>
-            <p>
-              You’ll want lots of solving supplies — paper, pencils, scissors,
-              tape, highlighters, markers, rulers, etc. While there’s lots of
-              open space at all of our locations, there’s not always an
-              abundance of seating, so we strongly recommend bringing clipboards
-              and either a picnic blanket or some lightweight camp chairs.
-            </p>
+        <div class="block" id="credits">
+          <h2>Credits</h2>
+        </div>
 
-            <p>
-              You’ll also want to dress for comfort while walking and solving
-              outside. In November in the Marina District, plan for anything
-              from warm and sunny to cold and foggy to damp and rainy, but
-              remember that San Francisco’s microclimates mean that the weather
-              on our route may not match the weather near you.
-            </p>
-          </dd>
-        </dl>
+        <div class="block" id="contact">
+          Questions? Comments? Please reach out to us at
+          <a href="mailto:bayphl1@bayphl.org">bayphl1@bayphl.org</a>.
+        </div>
       </div>
 
-      <div class="block" id="register">
-        <h2>BayPHL 1 Registration</h2>
-
-        <p><strong>Registration is open now!</strong></p>
-
-        <p>
-          If you would like to register a team of 4–6 people, you may register
-          via
-          <a href="https://forms.gle/1hd6gFpAQP3ewcRcA">this Google form</a>.
-          Once you have filled out the form, we will contact you via email to
-          collect payment in order to confirm your registration. BAPHL 24 will
-          cost $40 per team.
-        </p>
-
-        <p>
-          If you don’t have a team, you may sign up as a group of 1 or 2
-          unattached solvers using
-          <a href="https://forms.gle/88Szmtbd3hkbKHrr5">this Google form</a>,
-          and we will attempt to match you with an existing team that is willing
-          to accept unattached solvers.
-        </p>
-
-        <p>
-          (Note that for simplicity and our own sanity, we are unfortunately
-          unable to accept groups of 3 as either a team or a group of unattached
-          solvers. We would recommend finding a fourth person to join your group
-          if you can!)
-        </p>
-      </div>
-
-      <div class="block" id="contact">
-        Questions? Comments? Please reach out to us at
-        <a href="mailto:bayphl1@bayphl.org">bayphl1@bayphl.org</a>.
-      </div>
-    </div>
-
-    <style is:global>
-      :root {
-        --color-rust: #a0522d;
-        --color-cream: #f5f5dc;
-        --color-sand: #f4e4c1;
-        --color-espresso: #3c2414;
-        --color-slate-300: #2b3d4f;
-        --color-slate-500: #486684;
-        --color-sage-100: #1f2519;
-        --color-sage-200: #3f4b32;
-        --color-sage-300: #5e704b;
-        --color-sage-400: #7d9564;
-        --color-sage-500: #9caf88;
-        --color-sage-600: #b0bfa0;
-        --color-sage-700: #c4cfb7;
-        --color-sage-800: #d7dfcf;
-        --color-sage-900: #ebefe7;
-
-        font-family: "Inter", sans-serif;
-
-        --color-background: var(--color-sand);
-        --color-surface: var(--color-cream);
-        --color-text: var(--color-espresso);
-        --color-border: var(--color-rust);
-        --color-link: var(--color-slate-500);
-        --color-link-hover: var(--color-slate-300);
-        --color-tab-hover: var(--color-sage-700);
-      }
-
-      @media (prefers-color-scheme: dark) {
+      <style is:global>
         :root {
-          --color-background: var(--color-espresso);
-          --color-surface: var(--color-rust);
-          --color-text: var(--color-sand);
-          --color-border: #8b6f42; /* Warmer brown border instead of slate */
-          --color-link: var(--color-sage-700);
-          --color-link-hover: var(--color-sage-500);
-          --color-tab-hover: var(--color-sage-200);
+          --color-rust: #a0522d;
+          --color-cream: #f5f5dc;
+          --color-sand: #f4e4c1;
+          --color-espresso: #3c2414;
+          --color-slate-300: #2b3d4f;
+          --color-slate-500: #486684;
+          --color-sage-100: #1f2519;
+          --color-sage-200: #3f4b32;
+          --color-sage-300: #5e704b;
+          --color-sage-400: #7d9564;
+          --color-sage-500: #9caf88;
+          --color-sage-600: #b0bfa0;
+          --color-sage-700: #c4cfb7;
+          --color-sage-800: #d7dfcf;
+          --color-sage-900: #ebefe7;
+
+          font-family: "Inter", sans-serif;
+
+          --color-background: var(--color-sand);
+          --color-surface: var(--color-cream);
+          --color-text: var(--color-espresso);
+          --color-border: var(--color-rust);
+          --color-link: var(--color-slate-500);
+          --color-link-hover: var(--color-slate-300);
+          --color-tab-hover: var(--color-sage-700);
         }
-      }
 
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        background: var(--color-background);
-        color: var(--color-text);
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-    </style>
-
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap");
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      .tabs a {
-        font-family: "Roboto Slab", serif;
-        font-weight: bold;
-        color: var(--color-text);
-      }
-
-      h1 {
-        font-weight: 900;
-      }
-
-      h2 {
-        border-bottom: 1px solid #000000;
-        margin-bottom: 0.5em;
-      }
-
-      p {
-        margin-bottom: 1rem;
-
-        &:last-child {
-          margin-bottom: 0;
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --color-background: var(--color-espresso);
+            --color-surface: var(--color-rust);
+            --color-text: var(--color-sand);
+            --color-border: #8b6f42; /* Warmer brown border instead of slate */
+            --color-link: var(--color-sage-700);
+            --color-link-hover: var(--color-sage-500);
+            --color-tab-hover: var(--color-sage-200);
+          }
         }
-      }
 
-      a {
-        color: var(--color-link);
-      }
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
 
-      a:hover {
-        color: var(--color-link-hover);
-      }
+        body {
+          background: var(--color-background);
+          color: var(--color-text);
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+        }
+      </style>
 
-      dt {
-        font-weight: bold;
-      }
-      dd {
-        margin-bottom: 5px;
-        margin-left: 25px;
-        margin-top: 5px;
-      }
+      <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap");
 
-      p,
-      dd {
-        line-height: 1.25;
-      }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .tabs a {
+          font-family: "Roboto Slab", serif;
+          font-weight: bold;
+          color: var(--color-text);
+        }
 
-      #root {
-        max-width: 980px;
-        min-height: 100vh;
-        margin-inline: auto;
-        display: flex;
-        flex-direction: column;
-        padding-top: 20px;
-      }
+        h1 {
+          font-weight: 900;
+        }
 
-      #header {
-        padding-bottom: 8px;
-      }
+        h2 {
+          border-bottom: 1px solid #000000;
+          margin-bottom: 0.5em;
+        }
 
-      #banner {
-        width: 100%;
-        max-width: 690px;
-        margin: 20px auto;
-      }
+        p {
+          margin-bottom: 1rem;
 
-      .block {
-        margin-bottom: 8px;
-        margin-top: 0px;
-        background: var(--color-surface);
-        border: 2px solid var(--color-border);
-        padding: 15px;
-      }
-
-      .tabs {
-        display: flex;
-        gap: 0.5ex;
-        justify-content: end;
-        flex-wrap: wrap;
-
-        > * {
-          border: 2px solid var(--color-border);
-          padding: 5px 10px;
-          background: var(--color-surface);
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
 
         a {
-          text-decoration: none;
+          color: var(--color-link);
         }
 
         a:hover {
-          background-color: var(--color-tab-hover);
+          color: var(--color-link-hover);
         }
-      }
-    </style>
+
+        dt {
+          font-weight: bold;
+        }
+        dd {
+          margin-bottom: 5px;
+          margin-left: 25px;
+          margin-top: 5px;
+        }
+
+        p,
+        dd {
+          line-height: 1.55;
+        }
+
+        #root {
+          max-width: 980px;
+          min-height: 100vh;
+          margin-inline: auto;
+          display: flex;
+          flex-direction: column;
+          padding-top: 20px;
+        }
+
+        #header {
+          padding-bottom: 8px;
+        }
+
+        #banner {
+          width: 100%;
+          max-width: 690px;
+          margin: 20px auto;
+        }
+
+        .block {
+          margin-bottom: 8px;
+          margin-top: 0px;
+          background: var(--color-surface);
+          border: 2px solid var(--color-border);
+          padding: 15px;
+        }
+
+        .tabs {
+          display: flex;
+          gap: 0.5ex;
+          justify-content: end;
+          flex-wrap: wrap;
+
+          > * {
+            border: 2px solid var(--color-border);
+            padding: 5px 10px;
+            background: var(--color-surface);
+          }
+
+          a {
+            text-decoration: none;
+          }
+
+          a:hover {
+            background-color: var(--color-tab-hover);
+          }
+        }
+
+        .puzzles {
+          border-collapse: collapse;
+          width: 100%;
+          margin-bottom: 1em;
+
+          td.title {
+            width: 40%;
+          }
+
+          td.byline {
+            width: 40%;
+          }
+
+          td.link {
+            text-align: right;
+            width: 10%;
+          }
+
+          .location-info {
+            font-size: 0.8em;
+            font-style: italic;
+          }
+        }
+      </style>
+    </div>
   </body>
 </html>
