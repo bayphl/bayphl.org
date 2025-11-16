@@ -1,4 +1,5 @@
 ---
+import BayPHL1 from "../../layouts/BayPHL1.astro";
 import bayphl1 from "../../assets/1/banner.svg";
 import packet1 from "../../assets/1/packet-1-start.pdf";
 import packet2 from "../../assets/1/packet-2-beta.pdf";
@@ -8,382 +9,192 @@ import packet5 from "../../assets/1/packet-5-alpha-revisited.pdf";
 import packet6 from "../../assets/1/packet-6-end.pdf";
 import puzzleTheLostBooks from "../../assets/1/puzzles/the-lost-books/puzzle.pdf";
 import puzzleSupplyChains from "../../assets/1/puzzles/supply-chains/puzzle.pdf";
+import Block from "../../components/1/Block.astro";
+import Tabs from "../../components/1/Tabs.astro";
+import Tab from "../../components/1/Tab.astro";
+
+const finishers = [
+  "✈✈✈",
+  "🚀🚀🚀",
+  "Baffled",
+  "Big Dipper",
+  "BMT",
+  "Capybara Collective",
+  "Casual Birders",
+  "Chicken and ROFLs",
+  "Consumer Recreation Services",
+  "Cult of Idiotic Avians",
+  "Duck Gizzards",
+  "dunno",
+  "frak overspill not yet a health concern",
+  "gaylactic trendysetters",
+  "glwacoy",
+  "Golden Delicious",
+  "happy birthday jon!",
+  "Have you tried moving to the Bay Area?",
+  "Lake Supreme",
+  "Leguminati",
+  "Literally Baffle Waffle",
+  "LXP",
+  "Owls in Towels",
+  "Peanut Butter & Jellyfish",
+  "Pinniped Party",
+  "Ship of Fools",
+  "Something's Fishy",
+  "Strobe Light Syzygy",
+  "Team Locurio",
+  "Team Prospect",
+  "tfti",
+  "The Last Minute Tram",
+  "We are the issue",
+];
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/modern-css-reset@1.4.0/dist/reset.min.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>BayPHL 1</title>
-  </head>
+<BayPHL1 title="BayPHL 1">
+  <header class="mb-2">
+    <Tabs>
+      <Tab href="#info" label="Summary" />
+      <Tab href="#puzzles" label="Puzzles" />
+      <Tab href="#credits" label="Credits" />
+    </Tabs>
+  </header>
 
-  <body>
-    <div id="root">
-      <div id="header">
-        <div class="tabs">
-          <a href="#info">Summary</a>
-          <a href="#puzzles">Puzzles</a>
-          <a href="#credits">Credits</a>
-        </div>
-      </div>
+  <div class="w-full max-w-[690px] my-5 mx-auto">
+    <img src={bayphl1.src} alt="BayPHL 1" />
+  </div>
 
-      <div id="banner"><img src={bayphl1.src} alt="BayPHL 1" /></div>
+  <Block>
+    <a href="/"><strong>← Back to BayPHL homepage</strong></a>
+  </Block>
 
-      <div class="block">
-        <a href="/"><strong>← Back to BayPHL homepage</strong></a>
-      </div>
+  <Block id="info">
+    <h1 class="font-black font-roboto-slab text-4xl mb-4">BayPHL 1</h1>
 
-      <div class="block" id="info">
-        <h1>BayPHL 1</h1>
+    <p>
+      BayPHL 1 took place on November 8th and 9th, 2025 in the Marina District
+      of San Francisco. A total of 75 teams participated. Thanks to everyone who
+      joined us, and a special congratulations to the teams that finished:
 
-        <p>
-          BayPHL 1 took place on November 8th and 9th, 2025 in the Marina
-          District of San Francisco. A total of 75 teams participated. Thanks to
-          everyone who joined us, and a special congratulations to the teams
-          that finished:
+      <details style="margin-bottom: 1em;">
+        <summary>Finishing teams (in alphabetical order)</summary>
 
-          <details style="margin-bottom: 1em;">
-            <summary>Finishing teams (in alphabetical order)</summary>
-
-            <ul>
-              <li>✈✈✈</li>
-              <li>🚀🚀🚀</li>
-              <li>Baffled</li>
-              <li>Big Dipper</li>
-              <li>BMT</li>
-              <li>Capybara Collective</li>
-              <li>Casual Birders</li>
-              <li>Chicken and ROFLs</li>
-              <li>Consumer Recreation Services</li>
-              <li>Cult of Idiotic Avians</li>
-              <li>Duck Gizzards</li>
-              <li>dunno</li>
-              <li>frak overspill not yet a health concern</li>
-              <li>gaylactic trendysetters</li>
-              <li>glwacoy</li>
-              <li>Golden Delicious</li>
-              <li>happy birthday jon!</li>
-              <li>Have you tried moving to the Bay Area?</li>
-              <li>Lake Supreme</li>
-              <li>Leguminati</li>
-              <li>Literally Baffle Waffle</li>
-              <li>LXP</li>
-              <li>Owls in Towels</li>
-              <li>Peanut Butter & Jellyfish</li>
-              <li>Pinniped Party</li>
-              <li>Ship of Fools</li>
-              <li>Something's Fishy</li>
-              <li>Strobe Light Syzygy</li>
-              <li>Team Locurio</li>
-              <li>Team Prospect</li>
-              <li>tfti</li>
-              <li>The Last Minute Tram</li>
-              <li>We are the issue</li>
-            </ul>
-          </details>
-        </p>
-
-        <p>
-          <em
-            >(Did you finish BayPHL 1 but aren’t credited above? Email us and
-            let us know at <a href="mailto:bayphl1@bayphl.org"
-              >bayphl1@bayphl.org</a
-            >. We did our best but the beer may have distracted us a little from
-            marking things off in our tracker.)</em
-          >
-        </p>
-      </div>
-
-      <div class="block" id="puzzles">
-        <h2>Puzzles and Solutions</h2>
-
-        <p>
-          BayPHL 1 was an adaptation of <a href="https://24.baphl.org"
-            >BAPHL 24</a
-          > for the San Francisco Bay Area. As with BAPHL, teams of newly minted
-          archaeologists were sent out to investigate well-known wonders of the world
-          and see if they could unearth any secrets (Beginner Archaeologists — Yay!
-          — Pursuing Historical Landmarks). Starting in Fort Mason, teams traversed
-          the Marina District of San Francisco to the Palace of the Fine Arts, where
-          they solved their first metapuzzle and learned their first big secret.
-          That enabled them to return to sites they had already visited, discovering
-          new wonders along the way, before ending at Ghirardelli Square, where they
-          received their final metapuzzle.
-        </p>
-
-        <p>
-          BayPHL 1 consisted of 21 puzzles, broken into two rounds. The first
-          round included 6 “major wonders” and 6 “minor wonders,” (puzzles which
-          leveraged specific locations, physical components, or temporary
-          installations), capped off by a metapuzzle. The second round featured
-          7 additional puzzles and a capstone metapuzzle.
-        </p>
-
-        <p>
-          Here are the puzzles from BayPHL 1, grouped into the stops where teams
-          collected them:
-        </p>
-
-        <ul>
-          <li><a href={packet1}>Packet 1: Start</a></li>
-          <li><a href={packet2}>Packet 2: Beta</a></li>
-          <li><a href={packet3}>Packet 3: Gamma</a></li>
-          <li><a href={packet4}>Packet 4: Beta Revisited</a></li>
-          <li><a href={packet5}>Packet 5: Alpha Revisited</a></li>
-          <li><a href={packet6}>Packet 6: End</a></li>
+        <ul class="list-disc list-inside mt-4 ml-4">
+          {finishers.map((team) => <li>{team}</li>)}
         </ul>
+      </details>
+    </p>
 
-        <p>
-          Most of the puzzles were taken directly from BAPHL 24, occasionally
-          with very light modifications (for instance, eliminating a clue about
-          “Camber-ville” which might not land this far away from Cambridge). For
-          BAPHL, we offered teams the option signing up for either “normal” or
-          “hard” difficulty. As a logistical optimization for BayPHL, we only
-          produced a single difficulty which blended the two modes. Rather than
-          reproduce the solutions for those puzzles, <a
-            href="https://24.baphl.org">check out the BAPHL 24 solutions</a
-          >.
-        </p>
+    <p>
+      <em
+        >(Did you finish BayPHL 1 but aren’t credited above? Email us and let us
+        know at <a href="mailto:bayphl1@bayphl.org">bayphl1@bayphl.org</a>. We
+        did our best but the beer may have distracted us a little from marking
+        things off in our tracker.)</em
+      >
+    </p>
+  </Block>
 
-        <p>
-          Here are the solutions for the two puzzles that we created for BayPHL
-          1 (replacing “Young Kid Yoga: A Park Day” and ”Field Trip” from
-          BAPHL):
-        </p>
+  <Block id="puzzles">
+    <h2
+      class="font-bold font-roboto-slab text-2xl border-b-black border-b mb-4"
+    >
+      Puzzles and Solutions
+    </h2>
 
-        <table class="puzzles">
-          <tr>
-            <td class="title">The Lost Books</td>
-            <td class="byline">Evan Broder, James Douberley</td>
-            <td class="link">
-              <a href={puzzleTheLostBooks} target="_blank">Puzzle</a>
-            </td>
-            <td class="link">
-              <a href="./puzzles/the-lost-books/solution.html">Solution</a>
-            </td>
-          </tr>
-          <tr>
-            <td class="title">Supply Chains</td>
-            <td class="byline">Jessen Yu</td>
-            <td class="link">
-              <a href={puzzleSupplyChains} target="_blank">Puzzle</a>
-            </td>
-            <td class="link"
-              ><a href="./puzzles/supply-chains/solution.html">Solution</a></td
-            >
-          </tr>
-          <tr>
-            <td class="location-info" colspan="4">
-              Supply Chains was a location puzzle, which required teams to find
-              the <a
-                href="https://www.atlasobscura.com/places/world-sources-of-food-mural"
-                target="_blank"
-                rel="noopener noreferrer">World Sources of Food mosaic</a
-              > on the side of the Safeway on Marina Boulevard.
-            </td>
-          </tr>
-        </table>
+    <p>
+      BayPHL 1 was an adaptation of <a href="https://24.baphl.org">BAPHL 24</a> for
+      the San Francisco Bay Area. As with BAPHL, teams of newly minted archaeologists
+      were sent out to investigate well-known wonders of the world and see if they
+      could unearth any secrets (Beginner Archaeologists — Yay! — Pursuing Historical
+      Landmarks). Starting in Fort Mason, teams traversed the Marina District of
+      San Francisco to the Palace of the Fine Arts, where they solved their first
+      metapuzzle and learned their first big secret. That enabled them to return
+      to sites they had already visited, discovering new wonders along the way, before
+      ending at Ghirardelli Square, where they received their final metapuzzle.
+    </p>
 
-        <div class="block" id="credits">
-          <h2>Credits</h2>
-        </div>
+    <p>
+      BayPHL 1 consisted of 21 puzzles, broken into two rounds. The first round
+      included 6 “major wonders” and 6 “minor wonders,” (puzzles which leveraged
+      specific locations, physical components, or temporary installations),
+      capped off by a metapuzzle. The second round featured 7 additional puzzles
+      and a capstone metapuzzle.
+    </p>
 
-        <div class="block" id="contact">
-          Questions? Comments? Please reach out to us at
-          <a href="mailto:bayphl1@bayphl.org">bayphl1@bayphl.org</a>.
-        </div>
-      </div>
+    <p>
+      Here are the puzzles from BayPHL 1, grouped into the stops where teams
+      collected them:
+    </p>
 
-      <style is:global>
-        :root {
-          --color-rust: #a0522d;
-          --color-cream: #f5f5dc;
-          --color-sand: #f4e4c1;
-          --color-espresso: #3c2414;
-          --color-slate-300: #2b3d4f;
-          --color-slate-500: #486684;
-          --color-sage-100: #1f2519;
-          --color-sage-200: #3f4b32;
-          --color-sage-300: #5e704b;
-          --color-sage-400: #7d9564;
-          --color-sage-500: #9caf88;
-          --color-sage-600: #b0bfa0;
-          --color-sage-700: #c4cfb7;
-          --color-sage-800: #d7dfcf;
-          --color-sage-900: #ebefe7;
+    <ul class="mb-4">
+      <li><a href={packet1}>Packet 1: Start</a></li>
+      <li><a href={packet2}>Packet 2: Beta</a></li>
+      <li><a href={packet3}>Packet 3: Gamma</a></li>
+      <li><a href={packet4}>Packet 4: Beta Revisited</a></li>
+      <li><a href={packet5}>Packet 5: Alpha Revisited</a></li>
+      <li><a href={packet6}>Packet 6: End</a></li>
+    </ul>
 
-          font-family: "Inter", sans-serif;
+    <p>
+      Most of the puzzles were taken directly from BAPHL 24, occasionally with
+      very light modifications (for instance, eliminating a clue about
+      “Camber-ville” which might not land this far away from Cambridge). For
+      BAPHL, we offered teams the option signing up for either “normal” or
+      “hard” difficulty. As a logistical optimization for BayPHL, we only
+      produced a single difficulty which blended the two modes. Rather than
+      reproduce the solutions for those puzzles, <a href="https://24.baphl.org"
+        >check out the BAPHL 24 solutions</a
+      >.
+    </p>
 
-          --color-background: var(--color-sand);
-          --color-surface: var(--color-cream);
-          --color-text: var(--color-espresso);
-          --color-border: var(--color-rust);
-          --color-link: var(--color-slate-500);
-          --color-link-hover: var(--color-slate-300);
-          --color-tab-hover: var(--color-sage-700);
-        }
+    <p>
+      Here are the solutions for the two puzzles that we created for BayPHL 1
+      (replacing “Young Kid Yoga: A Park Day” and ”Field Trip” from BAPHL):
+    </p>
 
-        @media (prefers-color-scheme: dark) {
-          :root {
-            --color-background: var(--color-espresso);
-            --color-surface: var(--color-rust);
-            --color-text: var(--color-sand);
-            --color-border: #8b6f42; /* Warmer brown border instead of slate */
-            --color-link: var(--color-sage-700);
-            --color-link-hover: var(--color-sage-500);
-            --color-tab-hover: var(--color-sage-200);
-          }
-        }
+    <table class="border-collapse w-full mb-4">
+      <tr>
+        <td class="w-[40%]">The Lost Books</td>
+        <td class="w-[40%]">Evan Broder, James Douberley</td>
+        <td class="w-[10%] text-right">
+          <a href={puzzleTheLostBooks} target="_blank">Puzzle</a>
+        </td>
+        <td class="w-[10%] text-right">
+          <a href="./puzzles/the-lost-books/solution.html">Solution</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="w-[40%]">Supply Chains</td>
+        <td class="w-[40%]">Jessen Yu</td>
+        <td class="w-[10%] text-right">
+          <a href={puzzleSupplyChains} target="_blank">Puzzle</a>
+        </td>
+        <td class="w-[10%] text-right"
+          ><a href="./puzzles/supply-chains/solution.html">Solution</a></td
+        >
+      </tr>
+      <tr>
+        <td class="text-sm italic" colspan="4">
+          Supply Chains was a location puzzle, which required teams to find the <a
+            href="https://www.atlasobscura.com/places/world-sources-of-food-mural"
+            target="_blank"
+            rel="noopener noreferrer">World Sources of Food mosaic</a
+          > on the side of the Safeway on Marina Boulevard.
+        </td>
+      </tr>
+    </table>
+  </Block>
 
-        html,
-        body {
-          margin: 0;
-          padding: 0;
-        }
+  <Block id="credits">
+    <h2
+      class="font-bold font-roboto-slab text-2xl border-b-black border-b mb-4"
+    >
+      Credits
+    </h2>
+  </Block>
 
-        body {
-          background: var(--color-background);
-          color: var(--color-text);
-          min-height: 100vh;
-          display: flex;
-          flex-direction: column;
-        }
-      </style>
-
-      <style>
-        @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap");
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        .tabs a {
-          font-family: "Roboto Slab", serif;
-          font-weight: bold;
-          color: var(--color-text);
-        }
-
-        h1 {
-          font-weight: 900;
-        }
-
-        h2 {
-          border-bottom: 1px solid #000000;
-          margin-bottom: 0.5em;
-        }
-
-        p {
-          margin-bottom: 1rem;
-
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
-
-        a {
-          color: var(--color-link);
-        }
-
-        a:hover {
-          color: var(--color-link-hover);
-        }
-
-        dt {
-          font-weight: bold;
-        }
-        dd {
-          margin-bottom: 5px;
-          margin-left: 25px;
-          margin-top: 5px;
-        }
-
-        p,
-        dd {
-          line-height: 1.55;
-        }
-
-        #root {
-          max-width: 980px;
-          min-height: 100vh;
-          margin-inline: auto;
-          display: flex;
-          flex-direction: column;
-          padding-top: 20px;
-        }
-
-        #header {
-          padding-bottom: 8px;
-        }
-
-        #banner {
-          width: 100%;
-          max-width: 690px;
-          margin: 20px auto;
-        }
-
-        .block {
-          margin-bottom: 8px;
-          margin-top: 0px;
-          background: var(--color-surface);
-          border: 2px solid var(--color-border);
-          padding: 15px;
-        }
-
-        .tabs {
-          display: flex;
-          gap: 0.5ex;
-          justify-content: end;
-          flex-wrap: wrap;
-
-          > * {
-            border: 2px solid var(--color-border);
-            padding: 5px 10px;
-            background: var(--color-surface);
-          }
-
-          a {
-            text-decoration: none;
-          }
-
-          a:hover {
-            background-color: var(--color-tab-hover);
-          }
-        }
-
-        .puzzles {
-          border-collapse: collapse;
-          width: 100%;
-          margin-bottom: 1em;
-
-          td.title {
-            width: 40%;
-          }
-
-          td.byline {
-            width: 40%;
-          }
-
-          td.link {
-            text-align: right;
-            width: 10%;
-          }
-
-          .location-info {
-            font-size: 0.8em;
-            font-style: italic;
-          }
-        }
-      </style>
-    </div>
-  </body>
-</html>
+  <Block id="contact">
+    Questions? Comments? Please reach out to us at
+    <a href="mailto:bayphl1@bayphl.org">bayphl1@bayphl.org</a>.
+  </Block>
+</BayPHL1>

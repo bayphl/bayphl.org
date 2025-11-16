@@ -1,61 +1,9 @@
 ---
 import bayphl1 from "../../assets/1/banner.svg";
+import Block from "./Block.astro";
 ---
 
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap");
-
-  #preview {
-    --color-rust: #a0522d;
-    --color-cream: #f5f5dc;
-    --color-sand: #f4e4c1;
-    --color-espresso: #3c2414;
-    --color-slate-300: #2b3d4f;
-    --color-slate-500: #486684;
-
-    font-family: "Inter", sans-serif;
-
-    margin-bottom: 8px;
-    margin-top: 0px;
-    border: 2px solid var(--color-rust);
-    padding: 15px;
-    background-color: var(--color-cream);
-    color: var(--color-espresso);
-  }
-
-  p {
-    margin-bottom: 1rem;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  a {
-    color: var(--color-slate-500);
-  }
-
-  a:hover {
-    color: var(--color-slate-300);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    #preview {
-      background-color: var(--color-espresso);
-      color: var(--color-sand);
-      border-color: #8b6f42; /* Warmer brown border instead of slate */
-    }
-
-    a {
-      color: #f4a582; /* Warm coral instead of blue */
-    }
-
-    a:hover {
-      color: #ffb3a3; /* Lighter warm coral instead of blue */
-    }
-  }
-</style>
-<div id="preview">
+<Block id="preview">
   <p>
     Our first ever event, <a href="/1/">BayPHL 1</a>, took the recent <a
       href="https://24.baphl.org"
@@ -81,4 +29,4 @@ import bayphl1 from "../../assets/1/banner.svg";
       rel="noopener noreferrer">our mailing list</a
     > to learn about future events!
   </p>
-</div>
+</Block>

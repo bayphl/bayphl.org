@@ -1,0 +1,28 @@
+---
+import "../../styles/1.css";
+
+interface Props {
+  id?: string;
+}
+const { id } = Astro.props as Props;
+---
+
+<div
+  id={id}
+  class="mb-2 mt-0 bg-1-cream dark:bg-1-rust p-4 border-2 border-1-rust dark:border-1-brown text-inter text-1-espresso dark:text-1-sand"
+>
+  <slot />
+</div>
+<style>
+  @reference "../../styles/1.css";
+
+  @layer base {
+    div :global(a) {
+      @apply text-1-slate-500 hover:text-1-slate-300 underline dark:text-1-sage-700 dark:hover:text-1-sage-500;
+    }
+
+    div :global(p) {
+      @apply mb-4 last:mb-0 leading-normal;
+    }
+  }
+</style>
