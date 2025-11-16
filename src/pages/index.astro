@@ -1,39 +1,40 @@
 ---
+import "../styles/root.css";
 import Preview from "../components/1/preview.astro";
 import bannerLight from "../assets/bayphl-banner-light.svg";
 import bannerDark from "../assets/bayphl-banner-dark.svg";
 import bannerVerticalDark from "../assets/bayphl-logo-vertical-dark.svg";
 import bannerVerticalLight from "../assets/bayphl-logo-vertical-light.svg";
+import FAQCardGrid from "../components/FAQCardGrid.astro";
+import FAQCard from "../components/FAQCard.astro";
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/modern-css-reset@1.4.0/dist/reset.min.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-      rel="stylesheet"
-    />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>BayPHL: The Bay Area Puzzle Hunt League</title>
+    <style></style>
   </head>
-  <body>
-    <div id="root">
-      <header>
-        <picture id="logo">
+  <body
+    class="bg-cream dark:bg-smoke text-navy dark:text-cream min-h-dvh flex flex-col"
+  >
+    <div
+      class="max-w-3xl lg:max-w-5xl min-h-dvh mx-auto bg-white dark:bg-earth shadow-xl shadow-teal/10 flex flex-col"
+    >
+      <header
+        class="gap-2 md:gap-6 flex flex-col items-center bg-linear-135 from-teal to-sage text-cream dark:color-navy py-4 mb-4"
+      >
+        <picture class="w-full px-[15%] h-auto mr-4">
           <source
-            media={`(max-width: 768px) and (prefers-color-scheme: light)`}
+            media={`(width < 768px) and (prefers-color-scheme: light)`}
             srcset={bannerVerticalDark.src}
           />
           <source
-            media={`(max-width: 768px) and (prefers-color-scheme: dark)`}
+            media={`(width < 768px) and (prefers-color-scheme: dark)`}
             srcset={bannerVerticalLight.src}
           />
           <source
@@ -41,27 +42,33 @@ import bannerVerticalLight from "../assets/bayphl-logo-vertical-light.svg";
             srcset={bannerLight.src}
           />
           <source srcset={bannerDark.src} />
-          <img src={bannerDark.src} alt="BayPHL" />
+          <img
+            class="w-[185px] md:w-full mx-auto"
+            src={bannerDark.src}
+            alt="BayPHL"
+          />
         </picture>
-        <h1>Bay Area Puzzle Hunt League</h1>
+        <h1 class="text-2xl md:text-[2.5rem] font-bold tracking-wide">
+          Bay Area Puzzle Hunt League
+        </h1>
       </header>
-      <div id="main">
-        <h2>Coming Soon!</h2>
+      <div class="py-4 px-4 md:px-8">
+        <h2 class="mt-0">Coming Soon!</h2>
 
         <Preview />
 
         <h2>About BayPHL</h2>
 
-        <p class="intro">
+        <p class="text-lg">
           BayPHL is the <strong>Bay Area Puzzle Hunt League</strong>, a
           semi-regularly recurring, in-person puzzle hunts taking place in the
           San Francisco Bay Area.
         </p>
 
-        <dl>
-          <section class="card">
-            <dt>What is a puzzle hunt?</dt>
-            <dd>
+        <FAQCardGrid>
+          <FAQCard>
+            <Fragment slot="title">What is a puzzle hunt?</Fragment>
+            <Fragment slot="content">
               <p>
                 A puzzle hunt is a game in which players solve a series of
                 difficult puzzles that require various logical,
@@ -87,31 +94,31 @@ import bannerVerticalLight from "../assets/bayphl-logo-vertical-light.svg";
                   rel="noopener noreferrer">Puzzle Hunt Calendar</a
                 >.
               </p>
-            </dd>
-          </section>
+            </Fragment>
+          </FAQCard>
 
-          <section class="card">
-            <dt>How is BayPHL different?</dt>
-            <dd>
+          <FAQCard>
+            <Fragment slot="title">How is BayPHL different?</Fragment>
+            <Fragment slot="content">
               Traditionally, BayPHL is built to incorporate specific physical
               locations, requiring teams to visit and explore sites in order to
               discover and solve puzzles.
-            </dd>
-          </section>
+            </Fragment>
+          </FAQCard>
 
-          <section class="card">
-            <dt>Who runs BayPHL?</dt>
-            <dd>
+          <FAQCard>
+            <Fragment slot="title">Who runs BayPHL?</Fragment>
+            <Fragment slot="content">
               While there is a small team that coordinates and helps promote
               BayPHL events, there’s no one team that runs BayPHL. Each event is
               written and run by various groups of puzzle enthusiast volunteers
               from the Bay Area and beyond.
-            </dd>
-          </section>
+            </Fragment>
+          </FAQCard>
 
-          <section class="card">
-            <dt>Can I run a BayPHL?</dt>
-            <dd>
+          <FAQCard>
+            <Fragment slot="title">Can I run a BayPHL?</Fragment>
+            <Fragment slot="content">
               <p>
                 Sure! We want to enable more Bay Area puzzle hunts. Not sure you
                 want to write something new? We’re also happy to help you
@@ -125,12 +132,12 @@ import bannerVerticalLight from "../assets/bayphl-logo-vertical-light.svg";
                   >bayphl@bayphl.org</a
                 >
               </p>
-            </dd>
-          </section>
+            </Fragment>
+          </FAQCard>
 
-          <section class="card">
-            <dt>How can I learn more?</dt>
-            <dd>
+          <FAQCard>
+            <Fragment slot="title">How can I learn more?</Fragment>
+            <Fragment slot="content">
               If you’re interested in learning about future BayPHL events, <a
                 href="https://groups.google.com/g/bayphl-announce"
                 target="_blank"
@@ -142,229 +149,20 @@ import bannerVerticalLight from "../assets/bayphl-logo-vertical-light.svg";
                 target="_blank"
                 rel="noopener noreferrer">follow us on social media</a
               >
-            </dd>
-          </section>
+            </Fragment>
+          </FAQCard>
 
-          <section class="card">
-            <dt>Where did the name come from?</dt>
-            <dd>
+          <FAQCard>
+            <Fragment slot="title">Where did the name come from?</Fragment>
+            <Fragment slot="content">
               Frankly, “BAPHL” might be a better name, but it was already taken
               by our friends at the <a href="https://baphl.org"
                 >Boston Area Puzzle Hunt League</a
               >, so we needed some way to distinguish ourselves.
-            </dd>
-          </section>
-        </dl>
+            </Fragment>
+          </FAQCard>
+        </FAQCardGrid>
       </div>
     </div>
-
-    <style is:global>
-      :root {
-        --color-teal: #2c5f5a;
-        --color-coral: #e07a5f;
-        --color-dark-coral: #d4603f;
-        --color-sage: #81b29a;
-        --color-navy: #1a2332;
-        --color-deep-navy: #1f2937;
-        --color-cream: #f2e9e4;
-        --color-light-gray: #e9ecef;
-        --color-smoke: #1a1611;
-        --color-earth: #2a241c;
-        --color-bistre: #2f2821;
-        --color-taupe: #3d3529;
-        --color-salmon: #ae8877;
-        --color-melon: #ffb3a3;
-
-        --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif,
-          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-          "Noto Color Emoji";
-      }
-
-      :root {
-        --color-background: var(--color-cream);
-        --color-surface: white;
-        --color-text: var(--color-navy);
-        --color-header-text: var(--color-cream);
-        --color-heading-text: var(--color-teal);
-        --color-card-border: var(--color-light-gray);
-        --color-card-background: white;
-        --color-link: var(--color-coral);
-        --color-link-hover: var(--color-dark-coral);
-        --color-focus: var(--color-teal);
-        --color-surface-shadow: rgba(44, 95, 90, 0.08);
-        --color-card-shadow: rgba(0, 0, 0, 0.08);
-        --color-card-shadow-hover: rgba(0, 0, 0, 0.12);
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --color-background: var(--color-smoke);
-          --color-surface: var(--color-earth);
-          --color-text: var(--color-cream);
-          --color-header-text: var(--color-navy);
-          --color-heading-text: var(--color-sage);
-          --color-card-border: var(--color-taupe);
-          --color-card-background: var(--color-bistre);
-          --color-link: var(--color-salmon);
-          --color-link-hover: var(--color-melon);
-          --color-focus: var(--color-sage);
-          --color-surface-shadow: rgba(0, 0, 0, 0.25);
-          --color-card-shadow: rgba(0, 0, 0, 0.3);
-          --color-card-shadow-hover: rgba(0, 0, 0, 0.4);
-        }
-      }
-
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: var(--font-sans);
-      }
-
-      body {
-        background: var(--color-background);
-        color: var(--color-text);
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-    </style>
-
-    <style>
-      #root {
-        max-width: 1024px;
-        min-height: 100vh;
-        margin-inline: auto;
-        background: var(--color-surface);
-        box-shadow: 0 4px 32px var(--color-surface-shadow);
-        display: flex;
-        flex-direction: column;
-      }
-      header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        background: linear-gradient(
-          135deg,
-          var(--color-teal) 0%,
-          var(--color-sage) 100%
-        );
-        color: var(--color-header-text);
-        padding-block: 1rem;
-        margin-bottom: 1rem;
-      }
-      #logo {
-        width: 100%;
-        padding-inline: 15%;
-        height: auto;
-        margin-right: 1rem;
-      }
-      #logo img {
-        width: 100%;
-        margin-inline: auto;
-      }
-      h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        letter-spacing: 0.03em;
-      }
-      a {
-        color: var(--color-link);
-      }
-      a:hover {
-        color: var(--color-link-hover);
-        text-decoration: underline;
-      }
-      a:focus {
-        outline: 2px solid var(--color-focus);
-        outline-offset: 2px;
-        border-radius: 2px;
-      }
-      #main {
-        padding: 1rem 2rem;
-      }
-      #main h2 {
-        color: var(--color-heading-text);
-        font-size: 2.5rem;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-
-        &:first-of-type {
-          margin-top: 0;
-        }
-      }
-      #main .intro {
-        font-size: 1.15rem;
-      }
-      #main p {
-        color: var(--color-text);
-        line-height: 1.7;
-        margin-bottom: 1rem;
-      }
-      #main dl {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-
-        & .card {
-          border: 1px solid var(--color-card-border);
-          background: var(--color-card-background);
-          border-radius: 0.5rem;
-          padding: 1rem;
-          margin-bottom: 1rem;
-          box-shadow: 0 4px 20px var(--color-card-shadow);
-          transition: box-shadow 0.1s ease-in-out;
-
-          &:hover {
-            box-shadow: 0 8px 30px var(--color-card-shadow-hover);
-          }
-
-          &:focus-within {
-            outline: 2px solid var(--color-focus);
-            outline-offset: 2px;
-          }
-        }
-
-        & dt {
-          font-weight: 700;
-          font-size: 1.5rem;
-          margin-bottom: 1rem;
-          color: var(--color-heading-text);
-        }
-      }
-
-      @media (max-width: 1024px) {
-        #root {
-          max-width: 768px;
-        }
-
-        #main dl {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      @media (max-width: 768px) {
-        #logo img {
-          width: 185px;
-        }
-
-        header {
-          gap: 0.5rem;
-        }
-
-        h1 {
-          font-size: 1.5rem;
-        }
-
-        #main {
-          padding-inline: 1rem;
-        }
-
-        #main dl {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
   </body>
 </html>

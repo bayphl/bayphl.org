@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-teal: #2c5f5a;
+  --color-coral: #e07a5f;
+  --color-dark-coral: #d4603f;
+  --color-sage: #81b29a;
+  --color-navy: #1a2332;
+  --color-deep-navy: #1f2937;
+  --color-cream: #f2e9e4;
+  --color-light-gray: #e9ecef;
+  --color-smoke: #1a1611;
+  --color-earth: #2a241c;
+  --color-bistre: #2f2821;
+  --color-taupe: #3d3529;
+  --color-salmon: #ae8877;
+  --color-melon: #ffb3a3;
+
+  --font-sans:
+    "Nunito", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@layer base {
+  a {
+    @apply text-coral dark:text-salmon;
+
+    &:hover {
+      @apply text-dark-coral dark:text-melon underline;
+    }
+
+    &:focus {
+      @apply outline-2 outline-offset-2 outline-teal dark:outline-sage rounded-xs;
+    }
+  }
+
+  p {
+    @apply mb-4 leading-7;
+  }
+
+  h2 {
+    @apply text-teal dark:text-sage font-bold text-4xl mt-8 mb-4;
+  }
+}
