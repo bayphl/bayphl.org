@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import puzzle from "../../../../assets/1/puzzles/supply-chains/puzzle.pdf";
+import solved from "../../../../assets/1/puzzles/supply-chains/solved.jpg";
+import Answer from "../../../../components/1/Answer.astro";
+import Block from "../../../../components/1/Block.astro";
+import BayPHL1 from "../../../../layouts/BayPHL1.astro";
+---
+
+<BayPHL1 title="BayPHL 1: Supply Chains (Solution)">
+  <Block>
+    <a href="/1/"><strong>← Back to BayPHL 1</strong></a>
+  </Block>
+
+  <Block id="info">
+    <h1 class="font-black font-roboto-slab text-4xl mb-4">
+      Supply Chains (Solution)
+    </h1>
+
+    <p>
+      (<a href={puzzle} target="_blank" rel="noopener noreferrer">Puzzle</a>)
+    </p>
+
+    <p>
+      Supply Chains utilized the <a
+        href="https://www.atlasobscura.com/places/world-sources-of-food-mural"
+        target="_blank"
+        rel="noopener noreferrer">World Sources of Food mosaic</a
+      > on the side of the Safeway on Marina Boulevard. Each of the small images
+      in the puzzle is a small excerpt taken from the mosaic. For each row of images,
+      teams had to find the locations in the mural and draw a line connecting them
+      in sequence (as clued by the flavortext’s instruction to ”Trace where these
+      foods come from”), occasionally using two lines where a sequence of images
+      was separated by a “+” sign.
+    </p>
+
+    <p>Drawing out all 13 rows results in the following image:</p>
+
+    <Image
+      class="w-full mb-4"
+      src={solved}
+      alt="The World Sources of Food mosaic with lines drawn on top spelling the puzzle answer"
+    />
+
+    <p>which reads out the answer: <Answer>PETROCHEMICAL</Answer>.</p>
+  </Block>
+</BayPHL1>

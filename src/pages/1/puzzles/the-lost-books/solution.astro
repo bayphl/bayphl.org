@@ -1,0 +1,224 @@
+---
+import { Image } from "astro:assets";
+import puzzle from "../../../../assets/1/puzzles/the-lost-books/puzzle.pdf";
+import Answer from "../../../../components/1/Answer.astro";
+import Block from "../../../../components/1/Block.astro";
+import BayPHL1 from "../../../../layouts/BayPHL1.astro";
+import original01 from "../../../../assets/1/puzzles/the-lost-books/original/01.jpg";
+import original02 from "../../../../assets/1/puzzles/the-lost-books/original/02.jpg";
+import original03 from "../../../../assets/1/puzzles/the-lost-books/original/03.jpg";
+import original04 from "../../../../assets/1/puzzles/the-lost-books/original/04.jpg";
+import original05 from "../../../../assets/1/puzzles/the-lost-books/original/05.jpg";
+import original06 from "../../../../assets/1/puzzles/the-lost-books/original/06.jpg";
+import original07 from "../../../../assets/1/puzzles/the-lost-books/original/07.jpg";
+import original08 from "../../../../assets/1/puzzles/the-lost-books/original/08.jpg";
+import original09 from "../../../../assets/1/puzzles/the-lost-books/original/09.jpg";
+import original10 from "../../../../assets/1/puzzles/the-lost-books/original/10.jpg";
+import original11 from "../../../../assets/1/puzzles/the-lost-books/original/11.jpg";
+import original12 from "../../../../assets/1/puzzles/the-lost-books/original/12.jpg";
+import original13 from "../../../../assets/1/puzzles/the-lost-books/original/13.jpg";
+import original14 from "../../../../assets/1/puzzles/the-lost-books/original/14.jpg";
+import original15 from "../../../../assets/1/puzzles/the-lost-books/original/15.jpg";
+import original16 from "../../../../assets/1/puzzles/the-lost-books/original/16.jpg";
+import altered01 from "../../../../assets/1/puzzles/the-lost-books/altered/01.png";
+import altered02 from "../../../../assets/1/puzzles/the-lost-books/altered/02.png";
+import altered03 from "../../../../assets/1/puzzles/the-lost-books/altered/03.png";
+import altered04 from "../../../../assets/1/puzzles/the-lost-books/altered/04.png";
+import altered05 from "../../../../assets/1/puzzles/the-lost-books/altered/05.png";
+import altered06 from "../../../../assets/1/puzzles/the-lost-books/altered/06.png";
+import altered07 from "../../../../assets/1/puzzles/the-lost-books/altered/07.png";
+import altered08 from "../../../../assets/1/puzzles/the-lost-books/altered/08.png";
+import altered09 from "../../../../assets/1/puzzles/the-lost-books/altered/09.png";
+import altered10 from "../../../../assets/1/puzzles/the-lost-books/altered/10.png";
+import altered11 from "../../../../assets/1/puzzles/the-lost-books/altered/11.png";
+import altered12 from "../../../../assets/1/puzzles/the-lost-books/altered/12.png";
+import altered13 from "../../../../assets/1/puzzles/the-lost-books/altered/13.png";
+import altered14 from "../../../../assets/1/puzzles/the-lost-books/altered/14.png";
+import altered15 from "../../../../assets/1/puzzles/the-lost-books/altered/15.png";
+import altered16 from "../../../../assets/1/puzzles/the-lost-books/altered/16.png";
+import type { ImageMetadata } from "astro";
+
+interface Book {
+  img: ImageMetadata;
+  title: string;
+}
+
+const data: { original: Book; altered: Book }[] = [
+  {
+    original: { img: original01, title: "The Rainbow Fish" },
+    altered: { img: altered01, title: "His Egotism Full" },
+  },
+  {
+    original: { img: original02, title: "Where the Wild Things Are" },
+    altered: { img: altered02, title: "Award for Best Outfit Kid" },
+  },
+  {
+    original: { img: original03, title: "Curious George" },
+    altered: { img: altered03, title: "Trained Monkey" },
+  },
+  {
+    original: { img: original04, title: "If You Give a Mouse a Cookie" },
+    altered: { img: altered04, title: "Oh the Cake I Think I Earned" },
+  },
+  {
+    original: { img: original05, title: "The Giving Tree" },
+    altered: { img: altered05, title: "His Friend Bush" },
+  },
+  {
+    original: { img: original06, title: "Madeline" },
+    altered: { img: altered06, title: "Bodywork" },
+  },
+  {
+    original: { img: original07, title: "Charlotte’s Web" },
+    altered: { img: altered07, title: "Irrelevant Pig" },
+  },
+  {
+    original: { img: original08, title: "The Very Hungry Caterpillar" },
+    altered: { img: altered08, title: "Bug with Energy Unsoundness" },
+  },
+  {
+    original: { img: original09, title: "The Polar Express" },
+    altered: { img: altered09, title: "Non Plane Commute" },
+  },
+  {
+    original: { img: original10, title: "The Little Engine that Could" },
+    altered: { img: altered10, title: "Had Enough Effort from Heart" },
+  },
+  {
+    original: { img: original11, title: "Pippi Longstocking" },
+    altered: { img: altered11, title: "Woman Nevertheless" },
+  },
+  {
+    original: { img: original12, title: "Guess How Much I Love You" },
+    altered: { img: altered12, title: "Young Kid Yoga: A Game Day" },
+  },
+  {
+    original: { img: original13, title: "Make Way for Ducklings" },
+    altered: { img: altered13, title: "Bird and Her Community" },
+  },
+  {
+    original: { img: original14, title: "Harold and the Purple Crayon" },
+    altered: { img: altered14, title: "Sitter Was Not Paying Notice" },
+  },
+  {
+    original: { img: original15, title: "The Cat in the Hat" },
+    altered: { img: altered15, title: "How Mad Be Our Mom" },
+  },
+  {
+    original: { img: original16, title: "Goodnight Moon" },
+    altered: { img: altered16, title: "Lullabied Teen" },
+  },
+];
+---
+
+<BayPHL1 title="BayPHL 1: The Lost Books (Solution)">
+  <Block>
+    <a href="/1/"><strong>← Back to BayPHL 1</strong></a>
+  </Block>
+
+  <Block id="info">
+    <h1 class="font-black font-roboto-slab text-4xl mb-4">
+      The Lost Books (Solution)
+    </h1>
+
+    <p>
+      (<a href={puzzle} target="_blank" rel="noopener noreferrer">Puzzle</a>)
+    </p>
+
+    <p>
+      The Lost Books is a puzzle about children’s books. In the puzzle, each
+      image is the cover of a classic children’s book obscured using the <a
+        href="https://github.com/fogleman/primitive">primitive</a
+      > image processing library. The original title of each book has been replaced
+      by an alternative title which (to help with identification) was somewhat thematic
+      to the original book. (With “Bodywork” in particular, the reference was quite
+      oblique — in the book, Madeline gets appendicitis and has to have her appendix
+      removed).
+    </p>
+
+    <p>
+      The new titles have the same number of words as the original titles, each
+      with the same number of letters. However, in each pair of titles, only a
+      single “<a
+        href="https://www.puzzles.wiki/wiki/Eigenletters"
+        target="_blank"
+        rel="noopener noreferrer">eigenletter</a
+      >“ is the same (from the flavortext, “only one small bit of each is still
+      the same”). Reading those eigenletters in the order given yields the
+      answer to the puzzle, <Answer>FRIENDLY PETER PAN</Answer>.
+    </p>
+
+    <table class="border-collapse mx-auto mb-4">
+      <thead>
+        <tr>
+          <th class="text-center p-2">Puzzle</th>
+          <th class="text-center p-2">Original</th>
+          <th class="text-center p-2">Eigenletter</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          data.map(({ original, altered }) => {
+            const cleanedAltered = altered.title
+              .toUpperCase()
+              .replaceAll(/[^A-Z ]/g, "");
+            const cleanedOriginal = original.title
+              .toUpperCase()
+              .replaceAll(/[^A-Z ]/g, "");
+            return (
+              <tr>
+                <td class="p-2 align-top">
+                  <a
+                    href={altered.img.src}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      class="max-w-60"
+                      src={altered.img}
+                      alt={altered.title}
+                    />
+                  </a>
+                </td>
+                <td class="p-2 align-top">
+                  <a
+                    href={original.img.src}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      class="max-w-60"
+                      src={original.img}
+                      alt={original.title}
+                    />
+                  </a>
+                  <td>
+                    <div class="whitespace-nowrap font-roboto-mono">
+                      {cleanedAltered}
+                    </div>
+                    <div class="whitespace-nowrap font-roboto-mono">
+                      {cleanedOriginal}
+                    </div>
+                    <div class="whitespace-nowrap font-roboto-mono">
+                      {cleanedAltered
+                        .split("")
+                        .map((c, i) =>
+                          cleanedOriginal[i] === c ? (
+                            <strong>{c}</strong>
+                          ) : c === " " ? (
+                            c
+                          ) : (
+                            "_"
+                          )
+                        )}
+                    </div>
+                  </td>
+                </td>
+              </tr>
+            );
+          })
+        }
+      </tbody>
+    </table>
+  </Block>
+</BayPHL1>

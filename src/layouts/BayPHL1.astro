@@ -1,10 +1,15 @@
 ---
+import bayphl1 from "../assets/1/banner.svg";
+import Block from "../components/1/Block.astro";
+import Tab from "../components/1/Tab.astro";
+import Tabs from "../components/1/Tabs.astro";
 import "../styles/1.css";
 
 interface Props {
   title: string;
+  tabs?: { href: string; label: string }[];
 }
-const { title } = Astro.props;
+const { title, tabs } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,7 +26,28 @@ const { title } = Astro.props;
     class="bg-1-sand dark:bg-1-espresso text-inter text-1-espresso dark:text-1-sand min-h-dvh flex flex-col"
   >
     <div class="max-w-[980px] min-h-dvh mx-auto flex flex-col pt-5">
+      {
+        tabs && (
+          <header class="mb-2">
+            <Tabs>
+              {tabs.map(({ href, label }) => (
+                <Tab href={href} label={label} />
+              ))}
+            </Tabs>
+          </header>
+        )
+      }
+
+      <div class="w-full max-w-[690px] my-5 mx-auto">
+        <img src={bayphl1.src} alt="BayPHL 1" />
+      </div>
+
       <slot />
+
+      <Block id="contact">
+        Questions? Comments? Please reach out to us at
+        <a href="mailto:bayphl1@bayphl.org">bayphl1@bayphl.org</a>.
+      </Block>
     </div>
   </body>
 </html>

@@ -1,6 +1,5 @@
 ---
 import BayPHL1 from "../../layouts/BayPHL1.astro";
-import bayphl1 from "../../assets/1/banner.svg";
 import packet1 from "../../assets/1/packet-1-start.pdf";
 import packet2 from "../../assets/1/packet-2-beta.pdf";
 import packet3 from "../../assets/1/packet-3-gamma.pdf";
@@ -10,8 +9,6 @@ import packet6 from "../../assets/1/packet-6-end.pdf";
 import puzzleTheLostBooks from "../../assets/1/puzzles/the-lost-books/puzzle.pdf";
 import puzzleSupplyChains from "../../assets/1/puzzles/supply-chains/puzzle.pdf";
 import Block from "../../components/1/Block.astro";
-import Tabs from "../../components/1/Tabs.astro";
-import Tab from "../../components/1/Tab.astro";
 
 const finishers = [
   "✈✈✈",
@@ -50,19 +47,14 @@ const finishers = [
 ];
 ---
 
-<BayPHL1 title="BayPHL 1">
-  <header class="mb-2">
-    <Tabs>
-      <Tab href="#info" label="Summary" />
-      <Tab href="#puzzles" label="Puzzles" />
-      <Tab href="#credits" label="Credits" />
-    </Tabs>
-  </header>
-
-  <div class="w-full max-w-[690px] my-5 mx-auto">
-    <img src={bayphl1.src} alt="BayPHL 1" />
-  </div>
-
+<BayPHL1
+  title="BayPHL 1"
+  tabs={[
+    { href: "#info", label: "Summary" },
+    { href: "#puzzles", label: "Puzzles" },
+    { href: "#credits", label: "Credits" },
+  ]}
+>
   <Block>
     <a href="/"><strong>← Back to BayPHL homepage</strong></a>
   </Block>
@@ -160,7 +152,7 @@ const finishers = [
           <a href={puzzleTheLostBooks} target="_blank">Puzzle</a>
         </td>
         <td class="w-[10%] text-right">
-          <a href="./puzzles/the-lost-books/solution.html">Solution</a>
+          <a href="/1/puzzles/the-lost-books/solution">Solution</a>
         </td>
       </tr>
       <tr>
@@ -237,10 +229,5 @@ const finishers = [
         </p>
       </dd>
     </dl>
-  </Block>
-
-  <Block id="contact">
-    Questions? Comments? Please reach out to us at
-    <a href="mailto:bayphl1@bayphl.org">bayphl1@bayphl.org</a>.
   </Block>
 </BayPHL1>
