@@ -1,6 +1,4 @@
 ---
-import "../../styles/1.css";
-
 interface Props {
   id?: string;
 }
@@ -14,6 +12,7 @@ const { id } = Astro.props as Props;
   <slot />
 </div>
 <style>
+  @import "../../styles/1.css";
   @reference "../../styles/1.css";
 
   @layer base {
