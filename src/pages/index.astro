@@ -16,8 +16,16 @@ import FAQCard from "../components/FAQCard.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="The Bay Area Puzzle Hunt League: A semi-regular series of in-person puzzle hunts taking place in the San Francisco Bay Area."
+    />
     <title>BayPHL: The Bay Area Puzzle Hunt League</title>
     <style></style>
   </head>
@@ -34,19 +42,31 @@ import FAQCard from "../components/FAQCard.astro";
           <source
             media={`(width < 768px) and (prefers-color-scheme: light)`}
             srcset={bannerVerticalDark.src}
+            width={bannerVerticalDark.width}
+            height={bannerVerticalDark.height}
           />
           <source
             media={`(width < 768px) and (prefers-color-scheme: dark)`}
             srcset={bannerVerticalLight.src}
+            width={bannerVerticalLight.width}
+            height={bannerVerticalLight.height}
           />
           <source
             media={`(prefers-color-scheme: dark)`}
             srcset={bannerLight.src}
+            width={bannerLight.width}
+            height={bannerLight.height}
           />
-          <source srcset={bannerDark.src} />
+          <source
+            srcset={bannerDark.src}
+            width={bannerDark.width}
+            height={bannerDark.height}
+          />
           <img
             class="w-[185px] md:w-full mx-auto"
             src={bannerDark.src}
+            width={bannerDark.width}
+            height={bannerDark.height}
             alt="BayPHL"
           />
         </picture>

@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import "tailwindcss";
 
 @theme {
   --color-teal: #2c5f5a;
-  --color-coral: #e07a5f;
-  --color-dark-coral: #d4603f;
+  --color-coral: #ce4b27;
+  --color-dark-coral: #ab3f21;
   --color-sage: #81b29a;
   --color-navy: #1a2332;
   --color-deep-navy: #1f2937;
