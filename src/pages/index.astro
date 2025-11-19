@@ -1,190 +1,115 @@
 ---
-import "../styles/root.css";
 import Preview from "../components/1/preview.astro";
-import bannerLight from "../assets/bayphl-banner-light.svg";
-import bannerDark from "../assets/bayphl-banner-dark.svg";
-import bannerVerticalDark from "../assets/bayphl-logo-vertical-dark.svg";
-import bannerVerticalLight from "../assets/bayphl-logo-vertical-light.svg";
-import FAQCardGrid from "../components/FAQCardGrid.astro";
 import FAQCard from "../components/FAQCard.astro";
+import FAQCardGrid from "../components/FAQCardGrid.astro";
+import Root from "../layouts/Root.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-      rel="stylesheet"
-    />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <meta
-      name="description"
-      content="The Bay Area Puzzle Hunt League: A semi-regular series of in-person puzzle hunts taking place in the San Francisco Bay Area."
-    />
-    <title>BayPHL: The Bay Area Puzzle Hunt League</title>
-    <style></style>
-  </head>
-  <body
-    class="bg-cream dark:bg-smoke text-navy dark:text-cream min-h-dvh flex flex-col"
-  >
-    <div
-      class="max-w-3xl lg:max-w-5xl min-h-dvh mx-auto dark:bg-earth bg-bayphl-white shadow-xl shadow-teal/10 flex flex-col"
-    >
-      <header
-        class="gap-2 md:gap-6 flex flex-col items-center bg-linear-135 from-teal to-sage text-cream dark:color-navy py-4 mb-4"
-      >
-        <picture class="w-full px-[15%] h-auto mr-4">
-          <source
-            media={`(width < 768px) and (prefers-color-scheme: light)`}
-            srcset={bannerVerticalDark.src}
-            width={bannerVerticalDark.width}
-            height={bannerVerticalDark.height}
-          />
-          <source
-            media={`(width < 768px) and (prefers-color-scheme: dark)`}
-            srcset={bannerVerticalLight.src}
-            width={bannerVerticalLight.width}
-            height={bannerVerticalLight.height}
-          />
-          <source
-            media={`(prefers-color-scheme: dark)`}
-            srcset={bannerLight.src}
-            width={bannerLight.width}
-            height={bannerLight.height}
-          />
-          <source
-            srcset={bannerDark.src}
-            width={bannerDark.width}
-            height={bannerDark.height}
-          />
-          <img
-            class="w-[185px] md:w-full mx-auto"
-            src={bannerDark.src}
-            width={bannerDark.width}
-            height={bannerDark.height}
-            alt="BayPHL"
-          />
-        </picture>
-        <h1 class="text-2xl md:text-[2.5rem] font-bold tracking-wide">
-          Bay Area Puzzle Hunt League
-        </h1>
-      </header>
-      <main class="py-4 px-4 md:px-8">
-        <h2 class="mt-0">Past Hunts</h2>
+<Root title="BayPHL">
+  <h2 class="mt-0">Past Hunts</h2>
 
-        <Preview />
+  <Preview />
 
-        <h2>About BayPHL</h2>
+  <h2>About BayPHL</h2>
 
-        <p class="text-lg">
-          BayPHL is the <strong>Bay Area Puzzle Hunt League</strong>, a
-          semi-regularly recurring, in-person puzzle hunts taking place in the
-          San Francisco Bay Area.
+  <p class="text-lg">
+    BayPHL is the <strong>Bay Area Puzzle Hunt League</strong>, a semi-regularly
+    recurring, in-person puzzle hunts taking place in the San Francisco Bay
+    Area.
+  </p>
+
+  <FAQCardGrid>
+    <FAQCard>
+      <Fragment slot="title">What is a puzzle hunt?</Fragment>
+      <Fragment slot="content">
+        <p>
+          A puzzle hunt is a game in which players solve a series of difficult
+          puzzles that require various logical, lateral-thinking, and creative
+          skills to solve. These puzzles often come without explicit
+          instructions on how to solve them, requiring players to determine the
+          rules and logic behind each puzzle on their own.
         </p>
 
-        <FAQCardGrid>
-          <FAQCard>
-            <Fragment slot="title">What is a puzzle hunt?</Fragment>
-            <Fragment slot="content">
-              <p>
-                A puzzle hunt is a game in which players solve a series of
-                difficult puzzles that require various logical,
-                lateral-thinking, and creative skills to solve. These puzzles
-                often come without explicit instructions on how to solve them,
-                requiring players to determine the rules and logic behind each
-                puzzle on their own.
-              </p>
+        <p>
+          If you want to explore more puzzle hunts besides BayPHL, check out <a
+            href="https://puzzledpint.org/"
+            target="_blank"
+            rel="noopener noreferrer">Puzzled Pint</a
+          >, <a
+            href="https://playdash.org/"
+            target="_blank"
+            rel="noopener noreferrer">DASH</a
+          >, and the <a
+            href="https://puzzlehuntcalendar.com/"
+            target="_blank"
+            rel="noopener noreferrer">Puzzle Hunt Calendar</a
+          >.
+        </p>
+      </Fragment>
+    </FAQCard>
 
-              <p>
-                If you want to explore more puzzle hunts besides BayPHL, check
-                out <a
-                  href="https://puzzledpint.org/"
-                  target="_blank"
-                  rel="noopener noreferrer">Puzzled Pint</a
-                >, <a
-                  href="https://playdash.org/"
-                  target="_blank"
-                  rel="noopener noreferrer">DASH</a
-                >, and the <a
-                  href="https://puzzlehuntcalendar.com/"
-                  target="_blank"
-                  rel="noopener noreferrer">Puzzle Hunt Calendar</a
-                >.
-              </p>
-            </Fragment>
-          </FAQCard>
+    <FAQCard>
+      <Fragment slot="title">How is BayPHL different?</Fragment>
+      <Fragment slot="content">
+        Traditionally, BayPHL is built to incorporate specific physical
+        locations, requiring teams to visit and explore sites in order to
+        discover and solve puzzles.
+      </Fragment>
+    </FAQCard>
 
-          <FAQCard>
-            <Fragment slot="title">How is BayPHL different?</Fragment>
-            <Fragment slot="content">
-              Traditionally, BayPHL is built to incorporate specific physical
-              locations, requiring teams to visit and explore sites in order to
-              discover and solve puzzles.
-            </Fragment>
-          </FAQCard>
+    <FAQCard>
+      <Fragment slot="title">Who runs BayPHL?</Fragment>
+      <Fragment slot="content">
+        While there is a small team that coordinates and helps promote BayPHL
+        events, there’s no one team that runs BayPHL. Each event is written and
+        run by various groups of puzzle enthusiast volunteers from the Bay Area
+        and beyond.
+      </Fragment>
+    </FAQCard>
 
-          <FAQCard>
-            <Fragment slot="title">Who runs BayPHL?</Fragment>
-            <Fragment slot="content">
-              While there is a small team that coordinates and helps promote
-              BayPHL events, there’s no one team that runs BayPHL. Each event is
-              written and run by various groups of puzzle enthusiast volunteers
-              from the Bay Area and beyond.
-            </Fragment>
-          </FAQCard>
+    <FAQCard>
+      <Fragment slot="title">Can I run a BayPHL?</Fragment>
+      <Fragment slot="content">
+        <p>
+          Sure! We want to enable more Bay Area puzzle hunts. Not sure you want
+          to write something new? We’re also happy to help you recreate old
+          puzzle hunts from the Bay Area or elsewhere. Did you run a puzzle hunt
+          20 years ago that the kids these days might not know about?
+        </p>
 
-          <FAQCard>
-            <Fragment slot="title">Can I run a BayPHL?</Fragment>
-            <Fragment slot="content">
-              <p>
-                Sure! We want to enable more Bay Area puzzle hunts. Not sure you
-                want to write something new? We’re also happy to help you
-                recreate old puzzle hunts from the Bay Area or elsewhere. Did
-                you run a puzzle hunt 20 years ago that the kids these days
-                might not know about?
-              </p>
+        <p>
+          Let’s talk! Reach out to <a href="mailto:bayphl@bayphl.org"
+            >bayphl@bayphl.org</a
+          >
+        </p>
+      </Fragment>
+    </FAQCard>
 
-              <p>
-                Let’s talk! Reach out to <a href="mailto:bayphl@bayphl.org"
-                  >bayphl@bayphl.org</a
-                >
-              </p>
-            </Fragment>
-          </FAQCard>
+    <FAQCard>
+      <Fragment slot="title">How can I learn more?</Fragment>
+      <Fragment slot="content">
+        If you’re interested in learning about future BayPHL events, <a
+          href="https://groups.google.com/g/bayphl-announce"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          subscribe to our announcement list
+        </a> or <a
+          href="https://bsky.app/profile/bayphl.org"
+          target="_blank"
+          rel="noopener noreferrer">follow us on social media</a
+        >
+      </Fragment>
+    </FAQCard>
 
-          <FAQCard>
-            <Fragment slot="title">How can I learn more?</Fragment>
-            <Fragment slot="content">
-              If you’re interested in learning about future BayPHL events, <a
-                href="https://groups.google.com/g/bayphl-announce"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                subscribe to our announcement list
-              </a> or <a
-                href="https://bsky.app/profile/bayphl.org"
-                target="_blank"
-                rel="noopener noreferrer">follow us on social media</a
-              >
-            </Fragment>
-          </FAQCard>
-
-          <FAQCard>
-            <Fragment slot="title">Where did the name come from?</Fragment>
-            <Fragment slot="content">
-              Frankly, “BAPHL” might be a better name, but it was already taken
-              by our friends at the <a href="https://baphl.org"
-                >Boston Area Puzzle Hunt League</a
-              >, so we needed some way to distinguish ourselves.
-            </Fragment>
-          </FAQCard>
-        </FAQCardGrid>
-      </main>
-    </div>
-  </body>
-</html>
+    <FAQCard>
+      <Fragment slot="title">Where did the name come from?</Fragment>
+      <Fragment slot="content">
+        Frankly, “BAPHL” might be a better name, but it was already taken by our
+        friends at the <a href="https://baphl.org"
+          >Boston Area Puzzle Hunt League</a
+        >, so we needed some way to distinguish ourselves.
+      </Fragment>
+    </FAQCard>
+  </FAQCardGrid>
+</Root>
